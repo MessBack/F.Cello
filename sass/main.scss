@@ -1,0 +1,312 @@
+@import './colors';
+@import './animate';
+
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	position: relative;
+	font-family: 'Montserrat', sans-serif;
+	background-color: $wheat-color;
+	
+}
+
+html {
+	scroll-padding-top: 82px;
+}
+
+.blue-text {
+	color: $blue-color;
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: 2px;
+}
+
+.shadow-bg {
+	background-color: $shadow;
+}
+
+h2 {
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.underline {
+	width: 60px;
+	height: 4px;
+	margin: 0 auto;
+	background-color: $blue-color;
+	border-radius: 25px;
+}
+
+nav {
+	z-index: 1;
+	transition: background-color 0.6s;
+
+	.navbar-brand {
+		color: $wheat-color;
+	}
+
+	.nav-link {
+		color: $wheat-color;
+		text-transform: uppercase;
+	}
+
+	.nav-link:hover,
+	.navbar-brand:hover {
+		color: $blue-color;
+	}
+
+	.active {
+		color: $blue-color;
+	}
+
+	.fa-bars {
+		padding: 10px;
+	}
+}
+header {
+	color: $wheat-color;
+
+	.hero-img {
+		position: relative;
+		height: 100vh;
+		background-image: url('../img/wiola-640.jpg');
+		background-size: cover;
+		background-position: center;
+		background-attachment: fixed;
+		z-index: 0;
+
+		.hero-shadow {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0, 0, 0, 0.808);
+			z-index: -5;
+		}
+
+		.hero-text {
+			display: flex;
+			height: 100%;
+			padding: 10px;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			z-index: 5;
+		}
+	}
+
+	.btn-outline-light {
+		text-transform: uppercase;
+		color: $wheat-color;
+		border-color: $wheat-color;
+		transition: background-color 0.3s;
+	}
+
+	.btn-outline-light:hover {
+		background-color: $wheat-color;
+	}
+
+	.fa-chevron-down {
+		position: absolute;
+		bottom: 20px;
+		left: 50%;
+		transform: translateX(-50%);
+		font-size: 30px;
+		color: $wheat-color;
+	}
+}
+
+.bio {
+	background-color: $wheat-color;
+	p {
+		margin-top: 50px;
+		padding: 20px;
+		letter-spacing: 1px;
+	}
+}
+
+.galery {
+	
+	background-color: $wheat-color;
+	
+
+
+	
+
+	
+
+	.card-group {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		
+	}
+
+	.carousel-inner {
+		position: relative;
+		height: 600px;
+
+		.carousel-item {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 600px;
+		}
+	}
+}
+
+.demo {
+	position: relative;
+	background-image: url('../img/bg-sys-small.jpg');
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	z-index: 0;
+
+	h2 {
+		color: $wheat-color;
+	}
+
+	.demo-shadow {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: $shadow;
+		z-index: -10;
+	}
+
+	.demo-box {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		margin: 20px 10px;
+		padding: 30px;
+		box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
+		background-color: $wheat-color;
+		transition: transform 0.5s;
+
+		h3 {
+			text-transform: uppercase;
+			font-size: 24px;
+		}
+
+		iframe {
+		
+			height: 400px;
+		}
+	}
+
+	.demo-box:hover {
+		transform: scale(1.05);
+	}
+}
+
+.contact {
+	position: relative;
+	background-image: url('../img/filip-con.jpg');
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+	color: $wheat-color;
+	z-index: 0;
+
+	.contact-shadow {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: $shadow;
+		z-index: -10;
+	}
+
+	.contact-us {
+		display: flex;
+		align-items: center;
+
+		.contact-item {
+			margin: 25px 0;
+
+			h3 {
+				margin-bottom: 15px;
+				letter-spacing: 2px;
+			}
+		}
+	}
+
+	.fab {
+		padding: 10px;
+		font-size: 26px;
+		color: $wheat-color;
+		transition: color 0.3s;
+	}
+
+	.fab:hover {
+		color: $blue-color;
+	}
+}
+
+@media (min-width: 768px) {
+	header {
+		h1 {
+			font-size: 36px;
+		}
+
+		p {
+			font-size: 20px;
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	nav {
+		height: 82px;
+	}
+
+	header {
+		.hero-img {
+			background-image: url('../img/wiola.jpg');
+		}
+
+		h1 {
+			font-size: 42px;
+		}
+
+		p {
+			font-size: 24px;
+		}
+	}
+
+	.galery {
+		
+
+		.carousel-indicators {
+			padding-bottom: 20px;
+		}
+	}
+
+	.demo {
+		background-image: url('../img/bg-sys.jpg');
+	}
+
+	.contact {
+		background-image: url('../img/filip-con.jpg');
+	}
+}
+
+@media (min-width: 1200px) {
+	.galery {
+		.carousel-indicators {
+			padding-bottom: 20px;
+		}
+	}
+}
